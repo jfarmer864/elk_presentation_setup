@@ -14,7 +14,7 @@
     "secret_key": "{{user `aws_secret_key`}}",
     "region": "eu-west-1",
     "instance_type": "t2.micro",
-    "ami_name": "ELK_Stack_jack_farmer-{{user `version`}}",
+    "ami_name": "ELK_client_jack_farmer-{{user `version`}}",
     "source_ami_filter": {
       "filters": {
         "virtualization-type": "hvm",
@@ -30,7 +30,7 @@
 
   "type": "chef-solo",
   "cookbook_paths": ["Cookbooks"],
-  "run_list": ["ELK_cookbook::default"]
+  "run_list": ["client_cookbook::default"]
 
 }]
 }
